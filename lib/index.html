@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myLibrary</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>myLibrary</h1>
+      <button type="button">+ Add Book</button>
+    </div>
+  </header>
+  <div class="content">
+    <span class="modal-bg"></span>
+    <div class="add-book-modal">
+      <form action="">
+        <h2>Add a book</h2>
+        <input type="text" name="title" id="title" placeholder="Title">
+        <input type="text" name="author" id="author" placeholder="Author">
+        <input type="number" name="total_pages" id="total_pages" placeholder="Pages" min="1">
+        <label for="have_read">
+          Have you read it?
+          <input type="checkbox" name="have_read" id="have_read">
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="book-container">
+    </div>
+    <div class="information-panel">
+    </div>
+  </div>
+  <footer>
+    <a href="" target="_blank">
+      <h3>Made by Ganz <img src="../img/gh-icon.png" alt="GitHub"></h3>
+    </a>
+  </footer>
+</body>
+</html>

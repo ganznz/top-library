@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+:root {
+  --bg-colour: rgb(240, 240, 240);
+  --main-colour: rgb(255, 255, 255);
+  --accent-colour: rgb(252, 206, 137);
+  --container-width: 1200px;
+  --container-side-padding: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-colour);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--accent-colour);
+}
+s
+header h1 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.header-container {
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+  padding: 20px var(--container-side-padding);
+  margin: 0 auto;
+  max-width: var(--container-width);
+}
+
+.content {
+  padding: var(--container-side-padding);
+  flex-grow: 1;
+  display: flex;
+  gap: var(--container-side-padding);
+}
+
+.add-book-modal {
+  visibility: hidden;
+  position: absolute;
+  background-color: var(--main-colour);
+  border: 4px solid var(--accent-colour);
+  border-radius: 5px;
+  align-self: center;
+  padding: 20px;
+  width: 250px;
+  left: 50%;
+  margin-left: -125px;
+  scale: 0;
+  filter: drop-shadow(-4px 5px 2px rgba(0, 0, 0, 0.2));
+}
+
+.modal-bg {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(90, 65, 41, 0.6);
+  height: 100%;
+  width: 100%;
+}
+
+.add-book-modal.open, .modal-bg.open {
+  scale: 1;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.add-book-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add-book-modal input {
+  padding: 5px 13px;
+}
+
+.add-book-modal label {
+  display: block;
+}
+
+.book-container {
+  background-color: var(--main-colour);
+  flex: 2.5;
+}
+
+.information-panel {
+  background-color: var(--main-colour);
+  flex: 1;
+  min-width: 400px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--accent-colour);
+  padding: 5px var(--container-side-padding);
+}
+
+footer img {
+  height: 30px;
+  filter: invert(100%);
+}
