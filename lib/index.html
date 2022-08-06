@@ -19,16 +19,16 @@
     <span class="modal-bg"></span>
     <div class="add-book-modal">
       <button type="button" class="add-book-modal-close-btn">+</button>
-      <form action="">
+      <form id="add-book-form">
         <h2>Add what you're reading</h2>
         <input type="text" name="title" id="title" placeholder="Title" required>
         <input type="text" name="author" id="author" placeholder="Author" required>
         <input type="number" name="total_pages" id="total_pages" placeholder="Pages" min="1" required>
         <label for="have_read">
           Have you finished it?
-          <input type="checkbox" name="have_read" id="have_read" required>
+          <input type="checkbox" name="have_read" id="have_read">
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit" class="submit-book-btn">Submit</button>
       </form>
     </div>
     <div class="book-display-container">

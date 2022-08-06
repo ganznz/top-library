@@ -9,6 +9,7 @@
   --container-side-padding: 10px;
   --add-book-modal-transition: 0.3s;
   --text-colour: rgb(100, 100, 100);
+  --green-button-color: rgb(122, 199, 115);
   --red-button-colour: rgb(255, 128, 128);
 }
 
@@ -33,9 +34,10 @@ body {
 header {
   background-color: var(--accent-colour);
 }
-s
+
 header h1 {
-  font-weight: 700;
+  color: rgb(139, 96, 30);
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
@@ -113,7 +115,7 @@ header h1 {
   scale: 1;
   visibility: visible;
   opacity: 1;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
 .add-book-modal form {
@@ -170,6 +172,16 @@ form > button:hover {
   gap: 15px;
 }
 
+.book-template .book-frame-delete-btn {
+  background: no-repeat center/130% url("../img/delete-icon.svg");
+  width: 25px;
+  height: 25px;
+  /* border-radius: 50%; */
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+
 .book-template .book-title {
   font-weight: bold;
   font-size: 1rem;
@@ -193,17 +205,25 @@ form > button:hover {
 }
 
 .book-template .increment-pages {
-  background-color: rgb(122, 199, 115);
+  background-color: var(--green-button-color);
 }
 
 .book-template .book-status {
   color: rgb(255, 255, 255);
-  background-color: var(--red-button-colour);
+  background-color: var(--text-colour);
   padding: 3px 15px;
   width: 150px;
   border-radius: 3px;
   margin: 10px 0;
   text-align: center;
+}
+
+.book-template .book-status.complete {
+  background-color: var(--green-button-color);
+}
+
+.book-template .book-status.incomplete {
+  background-color: var(--red-button-colour);
 }
 
 .book-template .book-author {
