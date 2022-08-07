@@ -41,6 +41,11 @@ header h1 {
   letter-spacing: 1px;
 }
 
+header button {
+  width: 100px;
+  outline: 3px solid rgb(184, 235, 179);
+}
+
 .header-container {
   display: flex;
   gap: 100px;
@@ -132,7 +137,7 @@ header h1 {
   display: block;
 }
 
-form > button {
+form > button, header button {
   border: none;
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -142,7 +147,7 @@ form > button {
   transition: 0.2s;
 }
 
-form > button:hover {
+form > button:hover, header button:hover {
   filter: drop-shadow(0 3px 0 rgb(92, 146, 86));
   transition: 0.2s;
 }
@@ -156,7 +161,7 @@ form > button:hover {
 
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
 
@@ -177,14 +182,19 @@ form > button:hover {
   transition: 0.3s ease-out;
 }
 
-.book-template .book-frame-delete-btn {
+.book-frame-delete-btn {
   background: no-repeat center/130% url("../img/delete-icon.svg");
   width: 25px;
   height: 25px;
-  /* border-radius: 50%; */
   position: absolute;
   top: 7px;
   right: 7px;
+  transition: 0.2s;
+}
+
+.book-frame-delete-btn:hover {
+  transform: rotate(10deg);
+  transition: 0.2s;
 }
 
 .book-template .book-title {
@@ -224,6 +234,16 @@ form > button:hover {
   background-color: var(--green-button-color);
 }
 
+.decrement-pages:hover {
+  background-color: rgb(255, 147, 147);
+  transition: 0.1s;
+}
+
+.increment-pages:hover {
+  background-color: rgb(138, 211, 131);
+  transition: 0.1s;
+}
+
 .book-template .book-status {
   color: rgb(255, 255, 255);
   background-color: var(--text-colour);
@@ -246,7 +266,6 @@ form > button:hover {
 .book-status.incomplete:after {
   content: "Incomplete";
 }
-
 
 .book-template .book-status.incomplete {
   background-color: var(--red-button-colour);
