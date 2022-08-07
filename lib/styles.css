@@ -236,10 +236,21 @@ form > button:hover {
 
 .book-template .book-status.complete {
   background-color: var(--green-button-color);
+  transition: 0.2s;
 }
+
+.book-status.complete:after {
+  content: "Complete";
+}
+
+.book-status.incomplete:after {
+  content: "Incomplete";
+}
+
 
 .book-template .book-status.incomplete {
   background-color: var(--red-button-colour);
+  transition: 0.2s;
 }
 
 .book-template .book-author {
