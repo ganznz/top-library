@@ -131,6 +131,37 @@ header button {
 
 .add-book-modal input {
   padding: 5px 13px;
+  border: 2px solid rgb(200, 200, 200);
+  border-radius: 3px;
+}
+
+.add-book-modal input:focus {
+  outline: none;
+  border: 2px solid var(--accent-colour);
+  background-color: rgb(255, 242, 224);
+  transition: 0.3s;
+}
+
+.add-book-modal input.dupe-book-warning {
+  padding-bottom: 30px;
+  transition: 0.3s;
+}
+
+#duped-warning-text {
+  visibility: hidden;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--red-button-colour);
+  position: absolute;
+  text-align: left;
+  width: 175px;
+  top: 129px;
+  left: 35px;
+}
+
+#duped-warning-text.dupe-book-warning {
+  visibility: visible;
+  transition: 0.5s
 }
 
 .add-book-modal label {
@@ -193,7 +224,7 @@ form > button:hover, header button:hover {
 }
 
 .book-frame-delete-btn:hover {
-  transform: rotate(10deg);
+  transform: rotate(-10deg);
   transition: 0.2s;
 }
 
@@ -312,4 +343,14 @@ form > button:hover, header button:hover {
   width: 100%;
   text-align: center;
   padding: 20px 0 5px 0;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer h3 {
+  font-weight: bold;
+  color: rgb(244, 144, 12);
+  letter-spacing: 1px;
 }
