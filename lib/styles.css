@@ -208,11 +208,6 @@ form > button:hover, header button:hover {
   gap: 15px;
 }
 
-.book-template.deleted {
-  scale: 0;
-  transition: 0.3s ease-out;
-}
-
 .book-frame-delete-btn {
   background: no-repeat center/130% url("../img/delete-icon.svg");
   width: 25px;
